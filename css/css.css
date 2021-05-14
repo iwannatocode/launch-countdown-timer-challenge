@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: myFont;
+    src: url(../RedHatText-Bold.ttf);
+}
+body{
+    background-color: hsl(235, 16%, 14%);
+    font-family: myFont;
+}
+.montain{
+    position: absolute;
+    max-width: 100%;
+    bottom: 0;
+    z-index: -1;
+}
+.stars{
+    position: absolute;
+    max-width: 100%;
+    z-index: -2;
+}
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 60px 0 60px 0;
+    font-size: 18px;
+    letter-spacing: 7px;
+}
+.clock{
+    display: flex;
+    justify-content: center;
+}
+.cont{
+    margin: 10px;
+    text-align: center;
+    border-radius: -10px;
+}
+.box{
+    height: 120px;
+    width: 120px;
+    background-color: hsl(236, 21%, 26%);
+    box-shadow: 1px 14px 3px 1px black;
+    border-radius: 7px;
+    font-size: 70px;
+    color:hsl(345, 95%, 68%);
+    line-height: 120px;
+    font-weight: bold;
+}
+.heading{
+    color: hsl(237, 18%, 59%);
+    margin-top: 27px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+.efect{
+    width: 90%;
+    height: 0px;
+    border: 0.3px solid rgba(0, 0, 0, 0.74);
+    margin: -105px auto;
+    position: relative;
+    z-index: 4;
+}
+.efect::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 6px solid hsl(235, 16%, 14%);
+    right: -13px;
+    top: -6px;
+}
+.efect::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 6px solid hsl(235, 16%, 14%);
+    left: -13px;
+    top: -6px;
+}
+footer{
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+}
+.link{
+    display: inline-block;
+    margin: 0 15px 80px;
+}
+@media only screen and ( max-width: 560px ) {
+    body{
+        min-width: 360px;
+    }
+    .box{
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+        line-height: 70px;
+    }
+    .heading{
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+    .efect{
+        width: 90%;
+        margin: -75px auto;
+    }
+}
+.attribution {
+    position: absolute;
+    font-size: 11px;
+    text-align: center; 
+    bottom: 20px;
+    z-index: 10;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
